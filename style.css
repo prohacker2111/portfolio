@@ -1,0 +1,538 @@
+/* =========================================
+    Step 1: Reset
+    Always first. Never Skip 
+   =========================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============================================
+    Step 2: Body Base
+    Just Background and text color for now
+    we will refine fonts today
+   ============================================= */
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ============================================
+       Step 3:  NAVBAR LAYOUT
+      ============================================ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+
+    /* Sticky: Stays at the top when you scroll */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /* temp background */
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-logo span {
+    color: #3B82F6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* ==============================
+    STEP 4: HERO LAYOUT
+    Two cloumns: text LEFT , image RIGHT
+   ============================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    min-height: 90vh;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.hero-greeting {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #3B82F6;
+}
+
+.hero-name {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+
+    /* gradient */
+    background: linear-gradient(135deg, #ffffff 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-role {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #aaaaaa;
+}
+
+.hero-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    color: #999;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #3B82F6;
+    color: #fff;
+    border: 2px solid #3B82F6;
+}
+
+.btn-primary:hover {
+    background: #2563EB;
+    border-color: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #333;
+}
+
+.btn-secondary:hover {
+    border-color: #3B82F6;
+    color: #3B82F6;
+    transform: translateY(-2px);
+}
+
+/* Photo placeholder circle */
+
+.photo-placeholder {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1a1a1e, #16213e);
+    border: 3px solid #3B82F6;
+    color: #3B82F6;
+    box-shadow: 0 0 45px rgba(59, 130, 246, 0.4);
+}
+
+/* ====================================
+    STEP 5: SECTION TITLE (resuable)
+    Same style for all section headings
+   ==================================== */
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 48px;
+    color: #ffffff;
+}
+
+.section-title span {
+    color: #3B82F6;
+}
+
+/* ==================================
+    STEP 6: ABOUT LAYOUT
+    Two cloumns: text LEFT, interests RIGHT
+   =================================== */
+
+.about {
+    padding: 80px 5%;
+    background: #111111;
+}
+
+.about-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #999;
+    margin-bottom: 16px;
+}
+
+.about-interests {
+    width: 250px;
+}
+
+.about-interests h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.about-interests ul {
+    list-style-type: none;
+}
+
+.about-interests li {
+    font-size: 16px;
+    padding: 10px 0;
+    color: #999;
+    border-bottom: 1px solid #222;
+}
+
+/* ==================================
+    STEP 7: SKILLS LAYOUT
+    Single column, centered
+   =================================== */
+
+.skills {
+    padding: 80px 5%;
+    background: #0a0a0a;
+}
+
+.skills-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    margin-bottom: 32px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: growBar 1.5s ease forwards;
+}
+
+@keyframes growBar {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ==============================
+    STEP 8: PROJECTS LAYOUT
+    3 column grid
+   =============================== */
+
+.projects {
+    padding: 80px 5%;
+    background: #111;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #3B82F6;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-top {
+    height: 180px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B82F6;
+    background: linear-gradient(135deg, #1a1a1e, #16213e);
+}
+
+.project-info {
+    padding: 24px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    padding: 4px 12px;
+    background: rgba(59, 130, 246, 0.4);
+    border-radius: 20px;
+    font-size: 12px;
+    color: #3B82F6;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+/* ==============================
+    STEP 9: CONTACT LAYOUT
+    Two columns: info LEFT, form RIGHT
+   =============================== */
+
+.contact {
+    padding: 80px 5%;
+    background: #0a0a0a;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    padding: 24px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    border-color: #3B82F6;
+    transform: translateX(6px);
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.contact-item p {
+    color: #999;
+    font-size: 14px;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px 16px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3B82F6;
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: #555;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* ===============================
+    STEP 10: FOOTER
+    Simple centered footer
+    =============================== */
+
+.footer {
+    padding: 40px 5%;
+    background: #111111;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* =================================
+    STEP 11: RESPONSIVE
+    Mobile adjustments
+    ================================ */
+
+@media (max-width: 768px) {
+
+    /* Hero stacks vertically */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+        gap: 40px;
+    }
+
+    .hero-name {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .photo-placeholder {
+        width: 220px;
+        height: 220px;
+        font-size: 60px;
+    }
+
+    /* About stacks vertically */
+    .about-container {
+        flex-direction: column;
+        padding: 16px 5%;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    /* Projects: 1 column */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Contact stacks vertically */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    /* Section titles smaller */
+    .section-title {
+        font-size: 32px;
+    }
+
+    .hero-role {
+        font-size: 20px;
+    }
+
+
+}
