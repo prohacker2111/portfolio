@@ -13,20 +13,27 @@
 </head>
 
 <body>
+
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-logo">Surya<span>.</span></div>
-        <div class="nav-links">
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
             <a href="https://github.com" target="_blank">GitHub</a>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
         </div>
+        <div class="hamburger">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </div>
     </nav>
+
     <!--Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="hero">
         <div class="hero-text">
             <p class="hero-greeting">Hey, I'm</p>
             <h1 class="hero-name">Surya</h1>
@@ -37,14 +44,15 @@
                 creating real things that real people use.
             </p>
             <div class="hero-buttons">
-                <a href="#Projects" class="btn btn-primary">View My Work</a>
-                <a href="#Contact" class="btn btn-secondary">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
             <div class="photo-placeholder">S</div>
         </div>
     </section>
+
     <!-- About Section -->
     <section class="about" id="about">
         <h2 class="section-title">About <span>Me</span></h2>
@@ -79,6 +87,7 @@
             </div>
         </div>
     </section>
+
     <!-- Skills section-->
     <section class="skills" id="skills">
         <h2 class="section-title">My <span>Skills</span></h2>
@@ -121,49 +130,51 @@
             </div>
         </div>
     </section>
+
     <!-- Project Section -->
     <section class="projects" id="projects">
         <h2 class="section-title">My <span>Projects</span></h2>
-        <div class="projects-grid"></div>
-        <div class="project-card">
-            <div class="project-top">Restaurant Menu</div>
-            <div class="project-info">
-                <h3>Restaurant Menu</h3>
-                <p>A restaurant menu page built with HTML and CSS.</p>
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-top">Restaurant Menu</div>
+                <div class="project-info">
+                    <h3>Restaurant Menu</h3>
+                    <p>A restaurant menu page built with HTML and CSS.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="project-card">
-            <div class="project-top">Movies Gallery</div>
-            <div class="project-info">
-                <h3>Movies Gallary</h3>
-                <p>A movie gallery using CSS Grid.
-                    My first project using grid layout</p>
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Grid</span>
+            <div class="project-card">
+                <div class="project-top">Movies Gallery</div>
+                <div class="project-info">
+                    <h3>Movies Gallary</h3>
+                    <p>A movie gallery using CSS Grid.
+                        My first project using grid layout</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Grid</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="project-card">
-            <div class="project-top">Blog Page</div>
-            <div class="project-info">
-                <h3>Blog Page</h3>
-                <p>A blog page with sidebar layout.
-                    First time using sidebar navigation</p>
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Flexbox</span>
+            <div class="project-card">
+                <div class="project-top">Blog Page</div>
+                <div class="project-info">
+                    <h3>Blog Page</h3>
+                    <p>A blog page with sidebar layout.
+                        First time using sidebar navigation</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Flexbox</span>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
+
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <h2 class="section-title">Contact <span>Me</span></h2>
@@ -171,15 +182,15 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h4>📧 Email</h4>
-                    <p>suryais2014155</p>
+                    <p>agentsurya.112110@gmail.com</p>
                 </div>
                 <div class="contact-item">
                     <h4>💼 LinkedIn</h4>
-                    <p>linkedin.com/in/surya</p>
+                    <p>linkedin.com/in/surya(not real link under work)</p>
                 </div>
                 <div class="contact-item">
                     <h4>🐙 GitHub</h4>
-                    <p>github.com/surya</p>
+                    <p>github.com/surya(not real gitbub account under work)</p>
                 </div>
             </div>
             <form class="contact-form">
@@ -190,11 +201,18 @@
             </form>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Surya. Built with HTML & CSS 💙</p>
         <p>Designed and coded by me. No templates.</p>
     </footer>
+
+    <a href="#hero" id="back-to-top" class="hidden">↑</a>
+
+    <script src="./script.js">
+
+    </script>
 </body>
 
 </html>
